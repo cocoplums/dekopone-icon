@@ -1,0 +1,33 @@
+{
+  "name": "@dekopon/icon",
+  "version": "1.0.4",
+  "description": "",
+  "main": "cjs/index.js",
+  "module": "mjs/index.es.js",
+  "typings": "index.d.ts",
+  "files": [
+    "cjs",
+    "mjs",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "icon": "cd icon && rimraf react-icon/ && rimraf react-icon-cjs && cd build/ && node generate.js && node genDemo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/plugin-transform-arrow-functions": "^7.18.6",
+    "@babel/plugin-transform-destructuring": "^7.18.9",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/plugin-transform-spread": "^7.18.9",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "fs-extra": "^10.1.0",
+    "lodash": "^4.17.21",
+    "nunjucks": "^3.2.3",
+    "svgo": "^2.8.0"
+  }
+}
