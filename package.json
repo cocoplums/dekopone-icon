@@ -1,6 +1,6 @@
 {
   "name": "@dekopon/icon",
-  "version": "1.0.6",
+  "version": "1.0.12",
   "description": "",
   "main": "cjs/index.js",
   "module": "mjs/index.es.js",
@@ -8,7 +8,8 @@
   "files": [
     "cjs",
     "mjs",
-    "index.d.ts"
+    "index.d.ts",
+    "dist"
   ],
   "scripts": {
     "icon": "cd icon && rimraf react-icon/ && rimraf react-icon-cjs && cd build/ && node generate.js && node genDemo.js"
