@@ -1,6 +1,6 @@
 {
-  "name": "@dekopon/icon",
-  "version": "1.0.12",
+  "name": "@oc/icon",
+  "version": "1.0.13",
   "description": "",
   "main": "cjs/index.js",
   "module": "mjs/index.es.js",
