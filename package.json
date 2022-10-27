@@ -1,6 +1,6 @@
 {
   "name": "@oc/icon",
-  "version": "1.0.13",
+  "version": "0.0.1",
   "description": "",
   "main": "cjs/index.js",
   "module": "mjs/index.es.js",
