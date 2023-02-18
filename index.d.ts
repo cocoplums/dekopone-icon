@@ -27,10 +27,12 @@ export declare const IconLeftCircle: React.ForwardRefExoticComponent<IconProps &
 export declare const IconLeft: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconMenuFold: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconMenuUnfold: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
+export declare const IconPc: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconRightCircle: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconRight: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconRotateLeft: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconRotateRight: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
+export declare const IconRss: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconShrink: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconSwap: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
 export declare const IconToBottom: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>
