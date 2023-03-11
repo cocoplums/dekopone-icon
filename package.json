@@ -1,6 +1,6 @@
 {
   "name": "@oc/icon",
-  "version": "0.0.5",
+  "version": "0.0.12",
   "description": "",
   "main": "cjs/index.js",
   "module": "mjs/index.es.js",
@@ -11,6 +11,7 @@
     "index.d.ts"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "node build/generate.js"
   },
   "keywords": ["svg"],

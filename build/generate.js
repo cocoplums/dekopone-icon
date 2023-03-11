@@ -44,7 +44,7 @@ const config = {
       params: {
         attributes: [
           {
-            fill: 'none',
+            fill: 'currentColor',
           },
           {
             stroke: 'currentColor',
@@ -89,7 +89,6 @@ const syntaxCjs = (name) => {
 };
 const entryCode = svgDataFlat.map((com) => syntaxEs(com.componentName)).join('\n');
 const entryCodeCjs = svgDataFlat.map((com) => syntaxCjs(com.componentName)).join('\n');
-console.log('entryCode',process.cwd())
 fs.outputFile('./mjs/index.es.js', entryCode, (err) => {
   if (err) return;
   console.log('Generate es module entry success!'); // eslint-disable-line
@@ -192,6 +191,7 @@ let typingsCode = `import * as React from 'react';
 interface IconProps extends React.SVGAttributes<SVGElement> {
   style?: React.CSSProperties;
   spin?: boolean;
+  weight?: number;
 }
 
 `;
