@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { IconContext } from '../context';
 
 function {{ iconName }}Component (iconProps, ref) {
-  const { prefixCls = 'dekopon' } = useContext(IconContext);
+  const { prefixCls = 'oc' } = useContext(IconContext);
   const { spin, className } = iconProps;
   const props = {
     "aria-hidden": true,

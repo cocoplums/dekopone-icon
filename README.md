@@ -1,1 +1,1 @@
-# dekopone-icon
+# oc-icon

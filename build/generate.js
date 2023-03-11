@@ -105,7 +105,7 @@ fs.outputFile('../cjs/index.js', babel.transform(entryCodeCjs, babelConfigCjs).c
 const contextJsx = `import { createContext } from 'react';
 
 export var IconContext = createContext({
-  prefixCls: 'dekopon',
+  prefixCls: 'oc',
 });
 `;
 
