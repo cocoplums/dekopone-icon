@@ -87,15 +87,14 @@ const syntaxEs = (name) => {
 const syntaxCjs = (name) => {
   return `export { default as ${name} } from './${name}/index';`;
 };
-
 const entryCode = svgDataFlat.map((com) => syntaxEs(com.componentName)).join('\n');
 const entryCodeCjs = svgDataFlat.map((com) => syntaxCjs(com.componentName)).join('\n');
-
-fs.outputFile('../mjs/index.es.js', entryCode, (err) => {
+console.log('entryCode',process.cwd())
+fs.outputFile('./mjs/index.es.js', entryCode, (err) => {
   if (err) return;
   console.log('Generate es module entry success!'); // eslint-disable-line
 });
-fs.outputFile('../cjs/index.js', babel.transform(entryCodeCjs, babelConfigCjs).code, (err) => {
+fs.outputFile('./cjs/index.js', babel.transform(entryCodeCjs, babelConfigCjs).code, (err) => {
   if (err) return;
   console.log('Generate commonjs entry success!'); // eslint-disable-line
 });
@@ -109,13 +108,13 @@ export var IconContext = createContext({
 });
 `;
 
-fs.outputFile('../mjs/context.js', contextJsx, (err) => {
+fs.outputFile('./mjs/context.js', contextJsx, (err) => {
   if (err) return;
   console.log('Generate context file success!'); // eslint-disable-line
 });
 
 fs.outputFile(
-  '../cjs/context.js',
+  './cjs/context.js',
   babel.transform(contextJsx, babelConfigCjs).code,
   (err) => {
     if (err) return;
@@ -131,12 +130,12 @@ type IconContextType = {
 export declare const IconContext: React.Context<IconContextType>;
 `;
 
-fs.outputFile('../mjs/context.d.ts', dTs, (err) => {
+fs.outputFile('./mjs/context.d.ts', dTs, (err) => {
   if (err) return;
   console.log('Generate context ts file success!'); // eslint-disable-line
 });
 
-fs.outputFile('../cjs/context.d.ts', dTs, (err) => {
+fs.outputFile('./cjs/context.d.ts', dTs, (err) => {
   if (err) return;
   console.log('Generate commonjs context ts file success!'); // eslint-disable-line
 });
@@ -162,7 +161,7 @@ function generateIcon(cjs) {
       .replace(/class=/g, 'className=');
 
     nunjucks.render(
-      './icon.template.nunjucks',
+      './build/icon.template.nunjucks',
       {
         svg,
         iconName,
@@ -172,7 +171,7 @@ function generateIcon(cjs) {
         if (err) return;
         const code = babel.transform(res, cjs ? babelConfigCjs : babelConfig).code;
         fs.outputFile(
-          `../${cjs ? 'cjs' : 'mjs'}/${iconName}/index.js`,
+          `./${cjs ? 'cjs' : 'mjs'}/${iconName}/index.js`,
           code,
           (err) => {
             if (!err) {
@@ -204,7 +203,7 @@ svgDataFlat
       (typingsCode += `export declare const ${componentName}: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<unknown>>\n`)
   );
 
-fs.outputFileSync('../index.d.ts', typingsCode);
+fs.outputFileSync('./index.d.ts', typingsCode);
 
 generateIcon();
 generateIcon(true);
