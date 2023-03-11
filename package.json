@@ -1,6 +1,6 @@
 {
   "name": "@oc/icon",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "",
   "main": "cjs/index.js",
   "module": "mjs/index.es.js",
@@ -8,15 +8,14 @@
   "files": [
     "cjs",
     "mjs",
-    "index.d.ts",
-    "dist"
+    "index.d.ts"
   ],
   "scripts": {
     "build": "node build/generate.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["svg"],
+  "author": "oc",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@babel/plugin-transform-arrow-functions": "^7.20.7",
