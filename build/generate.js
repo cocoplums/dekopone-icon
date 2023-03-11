@@ -191,7 +191,6 @@ let typingsCode = `import * as React from 'react';
 interface IconProps extends React.SVGAttributes<SVGElement> {
   style?: React.CSSProperties;
   spin?: boolean;
-  weight?: number;
 }
 
 `;

@@ -3,13 +3,12 @@ import { IconContext } from '../context';
 
 function {{ iconName }}Component (iconProps, ref) {
   const { prefixCls = 'oc' } = useContext(IconContext);
-  const { spin, className,weight = 1 } = iconProps;
+  const { spin, className } = iconProps;
   const props = {
     "aria-hidden": true,
     focusable: false,
     ref,
     ...iconProps,
-    "stroke-width": weight,
     className: `${className ? className + ' ' : ''}${prefixCls}-icon ${prefixCls}-icon-{{iconClassName}}`,
   };
 
@@ -18,7 +17,6 @@ function {{ iconName }}Component (iconProps, ref) {
   }
   delete props.spin;
   delete props.isIcon;
-  delete props.weight;
 
   return {{ svg }};
 }
